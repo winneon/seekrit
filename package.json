@@ -1,0 +1,42 @@
+{
+  "name": "seekrit",
+  "description": "An end-to-end encrypted file host, inspired by Firefox Send.",
+  "author": "Jesse Bryan <jesse@winneon.moe>",
+  "version": "0.1.0",
+  "bin": "lib/prod.js",
+  "xo": {
+    "space": true,
+    "semicolon": false
+  },
+  "pkg": {
+    "assets": [
+      ".next",
+      "pages"
+    ],
+    "scripts": [
+      ".next/dist/**/*.js"
+    ],
+    "targets": [
+      "latest-linux-x64"
+    ]
+  },
+  "scripts": {
+    "dev": "babel-node app/dev.js",
+    "build": "next build && babel app -d lib",
+    "predist": "npm run build",
+    "dist": "pkg . --out-dir dist",
+    "prestart": "npm run build",
+    "start": "node lib/prod.js"
+  },
+  "dependencies": {
+    "next": "^3.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "pkg": "^4.2.4",
+    "xo": "^0.18.2"
+  }
+}

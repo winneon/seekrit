@@ -8,7 +8,10 @@
   "bin": "lib/prod.js",
   "xo": {
     "space": true,
-    "semicolon": false
+    "semicolon": false,
+    "rules": {
+      "object-curly-spacing": 0
+    }
   },
   "pkg": {
     "assets": [
@@ -28,7 +31,8 @@
     "predist": "npm run build",
     "dist": "pkg . --out-dir dist",
     "prestart": "npm run build",
-    "start": "node lib/prod.js"
+    "start": "node lib/prod.js",
+    "test": "xo && ava"
   },
   "dependencies": {
     "next": "^3.2.1",
@@ -36,8 +40,11 @@
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "ava": "^0.22.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
+    "coveralls": "^2.13.1",
+    "nyc": "^11.1.0",
     "pkg": "^4.2.4",
     "xo": "^0.18.2"
   }

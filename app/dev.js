@@ -1,3 +1,4 @@
 import Main from './main'
 
-new Main()
+process.env.NODE_ENV = 'development'
+global.main = new Main()

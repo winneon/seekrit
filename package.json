@@ -13,6 +13,11 @@
       "object-curly-spacing": 0
     }
   },
+  "ava": {
+    "require": [
+      "babel-core/register"
+    ]
+  },
   "pkg": {
     "assets": [
       ".next",
@@ -27,12 +32,13 @@
   },
   "scripts": {
     "dev": "babel-node app/dev.js",
-    "build": "next build && babel app -d lib",
+    "build": "next build && cross-env BABEL_ENV=production babel app -d lib",
     "predist": "npm run build",
     "dist": "pkg . --out-dir dist",
     "prestart": "npm run build",
     "start": "node lib/prod.js",
-    "test": "xo && ava"
+    "pretest": "npm run build",
+    "test": "xo && nyc ava"
   },
   "dependencies": {
     "next": "^3.2.1",
@@ -44,6 +50,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "coveralls": "^2.13.1",
+    "cross-env": "^5.0.5",
     "nyc": "^11.1.0",
     "pkg": "^4.2.4",
     "xo": "^0.18.2"

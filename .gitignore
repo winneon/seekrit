@@ -4,7 +4,6 @@ coverage/
 dist/
 lib/
 
-
 .nyc_output
 .DS_Store
 ._*

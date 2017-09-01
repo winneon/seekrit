@@ -1,16 +1,20 @@
 import Server from './server'
 
 class Main {
-  constructor() {
-    this.server = new Server()
+  constructor(port) {
+    this.server = new Server(port)
+  }
 
-    this.server.init()
+  async start() {
+    await this.server.init()
       .then(() => {
-        console.log(`Listening on port ${this.server.port}.`)
+        console.log(`Listening on port ${this.server.getPort()}.`)
       })
       .catch(err => {
         console.error(err)
       })
+
+    return this
   }
 }
 

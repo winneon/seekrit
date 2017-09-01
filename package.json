@@ -15,8 +15,9 @@
   },
   "ava": {
     "require": [
-      "babel-core/register"
-    ]
+      "babel-register"
+    ],
+    "babel": "inherit"
   },
   "pkg": {
     "assets": [
@@ -38,7 +39,7 @@
     "prestart": "npm run build",
     "start": "node lib/prod.js",
     "pretest": "npm run build",
-    "test": "xo && nyc ava"
+    "test": "xo && cross-env NODE_ENV=production NODE_TESTING=testing nyc ava test/*.js"
   },
   "dependencies": {
     "next": "^3.2.1",

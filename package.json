@@ -3,6 +3,8 @@
   "description": "An end-to-end encrypted file host, inspired by Firefox Send.",
   "author": "Jesse Bryan <jesse@winneon.moe>",
   "version": "0.1.0",
+  "license": "MIT",
+  "repository": "winneon/seekrit",
   "bin": "lib/prod.js",
   "xo": {
     "space": true,

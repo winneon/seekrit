@@ -1,4 +1,4 @@
-import stylesheet from 'sass/base.scss'
+import stylesheet from '../sass/base.scss'
 
 export default () => (
   <div>

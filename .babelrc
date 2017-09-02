@@ -5,15 +5,6 @@
   ],
   "plugins": [
     [
-      "module-resolver", {
-        "root": [ "." ],
-        "alias": {
-          "sass": "./sass"
-        },
-        "cwd": "babelrc"
-      }
-    ],
-    [
       "wrap-in-js", {
         "extensions": [
           "css$",

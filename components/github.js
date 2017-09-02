@@ -9,7 +9,7 @@ class GitHub extends React.Component {
 
 GitHub.propTypes = {
   append: PropTypes.string,
-  children: PropTypes.element.isRequired
+  children: PropTypes.node.isRequired
 }
 
 GitHub.defaultProps = {

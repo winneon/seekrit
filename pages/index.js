@@ -1,8 +1,9 @@
-import stylesheet from '../sass/base.scss'
+import React from 'react'
+import Sass from '../components/sass'
 
 export default () => (
   <div>
-    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-    chao!
+    <Sass />
+    yo
   </div>
 )

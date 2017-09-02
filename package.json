@@ -11,9 +11,11 @@
   "xo": {
     "space": true,
     "semicolon": false,
+    "extends": "xo-react",
     "rules": {
       "object-curly-spacing": 0,
-      "array-bracket-spacing": 0
+      "array-bracket-spacing": 0,
+      "react/jsx-tag-spacing": 0
     }
   },
   "ava": {
@@ -78,6 +80,8 @@
     "babel-preset-env": "^1.6.0",
     "coveralls": "^2.13.1",
     "cross-env": "^5.0.5",
+    "eslint-config-xo-react": "^0.13.0",
+    "eslint-plugin-react": "^7.3.0",
     "nyc": "^11.1.0",
     "pkg": "^4.2.4",
     "xo": "^0.18.2"

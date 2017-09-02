@@ -1,3 +1,8 @@
+import stylesheet from 'sass/base.scss'
+
 export default () => (
-  <div>Welcome to next!</div>
+  <div>
+    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+    chao!
+  </div>
 )

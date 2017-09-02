@@ -6,13 +6,12 @@ class Main {
   }
 
   async start() {
-    await this.server.init()
-      .then(() => {
-        console.log(`Listening on port ${this.server.getPort()}.`)
-      })
-      .catch(err => {
-        console.error(err)
-      })
+    try {
+      await this.server.init()
+      console.log(`> Listening on port ${this.server.getPort()}.`)
+    } catch (err) {
+      console.error(err)
+    }
 
     return this
   }

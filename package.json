@@ -15,7 +15,8 @@
     "rules": {
       "object-curly-spacing": 0,
       "array-bracket-spacing": 0,
-      "react/jsx-tag-spacing": 0
+      "react/jsx-tag-spacing": 0,
+      "react/jsx-curly-spacing": 0
     }
   },
   "ava": {
@@ -55,7 +56,6 @@
     "build": "next build && cross-env BABEL_ENV=production babel app/* bin/* -d lib",
     "predist": "npm run build",
     "dist": "pkg . --out-dir dist",
-    "postinstall": "npm run build",
     "prestart": "npm run build",
     "start": "node lib/bin/seekrit",
     "pretest": "npm run build",
@@ -72,6 +72,7 @@
     "normalize.css": "^7.0.0",
     "postcss-easy-import": "^2.1.0",
     "postcss-loader": "^2.0.6",
+    "prop-types": "^15.5.10",
     "raw-loader": "^0.5.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

@@ -29,7 +29,8 @@
   "nyc": {
     "exclude": [
       "lib/**/*",
-      "test/**/*"
+      "test/**/*",
+      "**/*.config.js"
     ]
   },
   "pkg": {

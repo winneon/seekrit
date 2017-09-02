@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    require('postcss-easy-import')({ prefix: '_' }),
+    require('postcss-easy-import')({ prefix: '' }),
     require('autoprefixer')({ })
   ]
 }

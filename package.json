@@ -56,7 +56,7 @@
     "build": "next build && cross-env BABEL_ENV=production babel app/* bin/* -d lib",
     "predist": "npm run build",
     "dist": "pkg . --out-dir dist",
-    "prestart": "npm run build",
+    "postinstall": "npm run build",
     "start": "node lib/bin/seekrit",
     "pretest": "npm run build",
     "test": "xo && cross-env NODE_ENV=production nyc ava --verbose"

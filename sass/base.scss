@@ -11,7 +11,7 @@ div.content {
     position: relative;
     width: 85px;
     cursor: pointer;
-    transition: border-color 250ms ease-in-out, width 500ms ease-in-out;
+    transition: border-color 250ms ease, background-color 250ms ease, color 250ms ease, width 500ms ease;
 
     &[disabled] {
       background-color: transparent !important;
@@ -30,7 +30,7 @@ div.content {
       z-index: -1;
 
       & > div.progress-bar {
-        transition: background-color 250ms ease-in-out;
+        transition: background-color 250ms ease;
       }
     }
   }

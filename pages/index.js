@@ -11,8 +11,7 @@ class Index extends React.Component {
     this.state = {
       disabled: false,
       progress: -1,
-      color: 'primary',
-      animated: true
+      color: 'primary'
     }
 
     this.handleClick = this.handleClick.bind(this)
@@ -27,11 +26,18 @@ class Index extends React.Component {
     const interval = setInterval(() => {
       if (this.state.progress === 100) {
         clearInterval(interval)
+
         this.setState({
-          disabled: false,
-          color: 'success',
-          animated: false
+          color: 'success'
         })
+
+        setTimeout(() => {
+          this.setState({
+            disabled: false,
+            progress: -1,
+            color: 'primary'
+          })
+        }, 1000)
       } else {
         this.setState({
           progress: this.state.progress + 1
@@ -49,11 +55,11 @@ class Index extends React.Component {
         <div>
           <Button color={ this.state.color } onClick={ this.handleClick } disabled={ this.state.disabled }>
             <Progress
-              animated={ this.state.animated }
+              animated
               color={ this.state.color }
               value={ this.state.progress }
             />
-            { this.state.progress > -1 && this.state.progress < 100 ? this.state.progress : (this.state.progress === 100 ? 'Success!' : 'Upload') }
+            { this.state.progress > -1 ? '\u00A0' : 'Upload' }
           </Button>
         </div>
         <footer>
